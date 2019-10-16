@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Abono Transporte</title>
+    </head>
+    <body>
+        <script>
+            var edad, pago;
+            var precio = 60;
+
+            edad = window.prompt("¿Cuántos años tienes?","*");
+            edad = parseInt(edad);
+            empadronado = window.prompt("¿Estás empadronado? Si (S) o No (N)","*");
+            
+            if (empadronado=="N")
+                {
+                    if (edad<16)
+                        {
+                            pago = 60-(60*0.2);
+                            document.write(pago);
+                        }
+                    else if ((edad >=16) && (edad < 18))
+                        {
+                            pago = 60-(60*0.15);
+                            document.write(pago);
+                        }
+                    else if ((edad >18) && (edad < 65))
+                        {
+                            pago = 60;
+                            document.write(pago);
+                        }
+                    else if (edad>=65)
+                        {
+                            pago = 60-(60*0.5);
+                            document.write(pago);
+                        } 
+                }
+            else if (empadronado=="S")  
+                {
+                    if (edad<16)
+                        {
+                            pago = 60-(60*0.3);
+                            document.write(pago);
+                        }
+                    else if ((edad >=16) && (edad < 18))
+                        {
+                            pago = 60-(60*0.20);
+                            document.write(pago);
+                        }
+                    else if ((edad >18) && (edad < 65))
+                        {
+                            pago = 60-(60*0.05);
+                            document.write(pago);
+                        }
+                    else if (edad>=65)
+                        {
+                            pago = 60-(60*0.6);
+                            document.write(pago);
+                        }   
+                }         
+        </script>
+    </body>
+</html>
